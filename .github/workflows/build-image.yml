@@ -3,6 +3,9 @@ run-name: building rust base image for geo projects
 on:
   workflow_dispatch:
   push:
+  schedule:
+    # rebuild every monday morning
+    - cron: '15 5 * * 1'
 
 env:
   REGISTRY: ghcr.io
