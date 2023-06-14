@@ -10,6 +10,7 @@ WORKDIR /project
 
 RUN cargo init
 COPY ./Cargo.toml ./Cargo.toml
+COPY ./Cargo.lock ./Cargo.lock
 
 RUN cargo build --release
 
